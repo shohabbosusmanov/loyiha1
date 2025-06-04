@@ -22,7 +22,7 @@ jobs:
           chmod 600 private_key.pem
           ssh -i private_key.pem -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST '
           cd /home/ubuntu/10-dars/loyiha1
-          git pull origin main --allow-unrelated-histories --no-rebase
+          git pull origin main
           docker-compose down
           docker-compose up -d --build
           '
